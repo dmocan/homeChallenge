@@ -1,6 +1,5 @@
 Part 1: Exploratory testing - Booking a stay in a hotel
 
-
 Starting of my exploratory on this site regarging hotels I noticed that a there is a throttle on for selecting Hotels when navigating to https://www.phptravels.net/
 At times it's displayed and there times when I cannot find Hotels in the main trip categories displayed on site.
 I would guess there is only a random % of times when it's displayed since I am using the same machine and ip adress so that would be an issue to fix with the development team.
@@ -24,3 +23,14 @@ Other bugs I noticed while performing exploratory testing would be:
    - displaying hotels with no available room is not recomanded. 
    - adding new reviews will not be displayed and stored for
    - lack of any relevant information on any available hotel offers, such as : Hotel Amenities, date of room availabilty, facilities or reivews or some price estimates.
+
+
+I would priorise all the usabilty related first, not displaying borken images on home page and unavailable offers.
+I would guess since there are no available rooms right now you cann't book any listed hotel offering but I would suggest to have listed only offers with available rooms.
+
+As per risks mitigation for this type of application:
+  - Availability, the posiblity of unavailability would cause a loss for the company so any type of load balancing would be recomanded.
+  - Performance loss, we do not want to suffer on the performance part mainly on special days or periods of the year, such as Christmas, Valantines day. We could mitigate this
+  with caching or TCP optimization.
+  - Malicious atacks - this would be real concern due to the sensitive data we store on each customer: name, adress, card details, etc. Here some Web Application Firewall could
+  minimize atacks such as SQL injection and cross site scripting.
