@@ -1,0 +1,26 @@
+Part 1: Exploratory testing - Booking a stay in a hotel
+
+
+Starting of my exploratory on this site regarging hotels I noticed that a there is a throttle on for selecting Hotels when navigating to https://www.phptravels.net/
+At times it's displayed and there times when I cannot find Hotels in the main trip categories displayed on site.
+I would guess there is only a random % of times when it's displayed since I am using the same machine and ip adress so that would be an issue to fix with the development team.
+
+While the hotel offers are displayed I noticed the following scenarios to get to the landing page.
+
+1. From the home page https://www.phptravels.net/home you can select 'Hotels' in the main iframe and search for your arrival city, your travel dates and number of passangers.
+   After deciding which hotel offer you desire you need to click 'Details' to navigate to the landing page.
+   Here you can review your details and checkout information.
+   One defect I noticed on all hotels landing pages where the absence of 'Book Now' button which were displayed on other booking types available on site.
+   The user can only refine  dates and modify the booking details regarding the check in / check out dates and number of passangers without having the 'Book Now' button displayed
+
+2. From the home page, scrolling down you can get to the featured hotels from where you can follow the same journey as described above.
+
+3. There is a contact number displayed on the right corner of the site, calling and booking an available hotel in the disered location should work.
+
+If still unsure how to make a hotel booking any customer could read the 'How to book' steps from https://www.phptravels.net/How-to-Book
+
+Other bugs I noticed while performing exploratory testing would be:
+   - a few hotel images were not displayed on home page and also on the hotel landing page.
+   - displaying hotels with no available room is not recomanded. 
+   - adding new reviews will not be displayed and stored for
+   - lack of any relevant information on any available hotel offers, such as : Hotel Amenities, date of room availabilty, facilities or reivews or some price estimates.
