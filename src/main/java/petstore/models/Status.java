@@ -1,7 +1,5 @@
 package petstore.models;
 
-import lombok.*;
-
 /**
  * Created by Daniel on 4/17/2021.
  */

@@ -3,12 +3,13 @@ package petstore;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
-import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 import petstore.models.Pet;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.containsString;
+import static petstore.Constants.PET_ENDPOINT;
+import static petstore.Constants.baseURI;
 
 /**
  * Created by Daniel on 4/17/2021.
@@ -17,8 +18,6 @@ import static org.hamcrest.CoreMatchers.containsString;
 
 public class RestAssuredClient {
     private RequestSpecification requestSpec;
-    public static String baseURI = "https://petstore3.swagger.io/api/v3";
-    String PET_ENDPOINT = baseURI + "/pet";
 
     public RestAssuredClient() {
         RequestSpecBuilder requestSpecBuilder = new RequestSpecBuilder();

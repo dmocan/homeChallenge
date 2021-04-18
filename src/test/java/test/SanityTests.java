@@ -14,12 +14,12 @@ import java.util.Collections;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.samePropertyValuesAs;
+import static petstore.Constants.PHOTO_URL;
 
 /**
  * Created by Daniel on 4/17/2021.
  */
 public class SanityTests {
-    private static final String PHOTO_URL = "https://pisicutesicaini.ro/wp-content/upsloads/2019/07/258861-1600x1067-dog-in-water1.jpg";
     RestAssuredClient restAssuredClient;
 
     @BeforeClass
@@ -27,9 +27,9 @@ public class SanityTests {
         restAssuredClient = new RestAssuredClient();
     }
 
-    Pet pet = Pet.builder()
+    Pet item = Pet.builder()
             .id(RandomStringUtils.randomNumeric(1))
-            .name("New Pet")
+            .name("Add new item")
             .category(new Category(1, "Dogs"))
             .photoUrls(Collections.singletonList(PHOTO_URL))
             .tags(Collections.singletonList(new Tag(1, "Husky")))
@@ -39,20 +39,20 @@ public class SanityTests {
 
     @Test(priority = 0)
     public void addPet() {
-        Pet petResponse = restAssuredClient.addPet(pet);
-        assertThat(petResponse, is(samePropertyValuesAs(pet)));
+        Pet petResponse = restAssuredClient.addPet(item);
+        assertThat(petResponse, is(samePropertyValuesAs(item)));
     }
 
     @Test(priority = 1)
     public void updatePet() {
-        pet.setName("New pet name added");
-        Pet petResponse = restAssuredClient.updatePet(pet);
-        assertThat(petResponse, is(samePropertyValuesAs(pet)));
+        item.setName("New item name added");
+        Pet petResponse = restAssuredClient.updatePet(item);
+        assertThat(petResponse, is(samePropertyValuesAs(item)));
     }
 
     @Test(priority = 2)
     public void deletePetAndCheckIfDeleted() {
-        restAssuredClient.deletePet(pet);
-        restAssuredClient.verifyPetDeleted(pet);
+        restAssuredClient.deletePet(item);
+        restAssuredClient.verifyPetDeleted(item);
     }
 }
