@@ -23,7 +23,7 @@ public class SanityTests {
     RestAssuredClient restAssuredClient;
 
     @BeforeClass
-    public void prepareData() {
+    public void setup() {
         restAssuredClient = new RestAssuredClient();
     }
 
