@@ -27,7 +27,7 @@
 
 * In order to run your tests you need to setup the API petstore and run it locally
 
-_`API petstore setup`_
+_`API petstore local setup`_
 *  Clone the API repo from here `https://github.com/swagger-api/swagger-petstore`
 *  In order to run the server locally run this task: `mvn package jetty:run`
 *  Check http://localhost:8080 to see if works 
