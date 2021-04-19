@@ -1,14 +1,14 @@
 - In part II for my API automation testing project I choose to create a maven project using java as a programming language and testNG as a testing framework.
 I used the Rest Assured library in java which seemed familiar to me since I used it a few times at my work and also in some workshops I participated in recently.
-As for my scope, it is to add a few integration and functional tests for a few CRUD operations which will test some basic positive scenarios.
+As for my scope, it is to add a few integration (considering that I am doing a flow where I add, update and remove a pet) and functional tests for the same CRUD operations which will test some basic positive scenarios.
 My tests will validate requests only in isolation checking the response accordingly using hamcrest library for most of my asserts.
 Mainly my tests are validating if the functionality is behaving as expected using only positive scenarios where I want to ensure basic correctness for the REST API.
 
 - We could also cover a few non-functional testing approaches which should be mandatory for API testing.
 The first thing we could do is to check if the API is designed according to the correct security principles.
 Add some performance tests to check the API response time, in different scenarios. (load tests, stress tests, etc)
-Also usability testing to ensure that users without prior knowledge of the system can make use of these API's easily. (documentation, code examples)
+Also non-functional testing, covering installation to ensure that users without prior knowledge of the system can make use of these API's easily. (documentation, code examples)
 
 
-- The disadvantage in testing and validating REST services in java is that it's harder than in other dynamic languages and on the another hand we have the advantage over Postman to display our development skills.
+- The disadvantage in testing and validating REST services in java is that it's harder than in other dynamic languages and on the another hand we have the advantage to display our development skills.
 Other advantages I noticed by choosing Rest Assured in java rather than Postman are the code reusability and also the possibility to customize our reports.
